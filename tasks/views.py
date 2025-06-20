@@ -13,5 +13,10 @@ def home(request):
 def contact(request):
     return HttpResponse("<h1 style='color:red'>Contact us page</h1>")
 
-def show_task(request):
+def showtask(request):
     return HttpResponse(" This is task page") 
+
+def show_task(request,id):
+    print("id",id)
+    print("id type", type(id))
+    return HttpResponse(f" This is task page {id} ")
